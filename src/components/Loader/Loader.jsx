@@ -4,6 +4,7 @@ import { Triangle } from 'react-loader-spinner';
 
 
 export const Loader = ({visible}) => {
+  console.log(visible);
     return (
         <>
         <Triangle
