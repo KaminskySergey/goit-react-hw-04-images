@@ -56,8 +56,10 @@ export const  App = () => {
         const {data} = await axios.get(`${BASE_URL}q=${name}&page=${page}&key=${KEY}&image_type=photo&orientation=horizontal&per_page=12`)
         setImage(pS => [...pS, ...data.hits])
         setImageHits(data)
-        
-        toast.success(`Found ${data.total} photos`)
+        if(page === 1){
+          toast.success(`Found ${data.total} photos`)
+        }
+
         
         
         
